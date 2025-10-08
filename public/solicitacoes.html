@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Solicitação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+        <h1>Sistema de Solicitação de Materiais</h1>
+        <img src="IMG/ABA.png" alt="Logo da Empresa" class="logo">
+    </div>
+    <h2 id="nomeDoGrupo" class="sub"></h2>
+    <a href="index.html" class="back-link">← Voltar para Grupos</a>
+
+    <div class="grid">
+      <div class="card form-card">
+        <h2>Nova Solicitação</h2>
+        <form id="solicitacaoForm">
+          <label>Seu Nome</label>
+          <input type="text" name="nome" placeholder="Ex: João Silva" required>
+          <label>Setor</label>
+          <input type="text" name="setor" placeholder="Ex: Financeiro" required>
+          <label>Item Solicitado</label>
+          <input type="text" name="item" placeholder="Ex: Pacote de 500 folhas A4" required>
+          <label>Quantidade</label>
+          <input type="number" name="quantidade" placeholder="Ex: 5" required>
+          <label>Justificativa</label>
+          <textarea name="justificativa" placeholder="Ex: Para impressão de relatórios mensais"></textarea>
+          <label>Link do Material</label>
+          <input type="url" name="link" placeholder="https://exemplo.com/produto">
+          <button type="submit">Enviar Solicitação</button>
+        </form>
+      </div>
+
+      <div class="card list-card">
+        <h2>Solicitações Recentes</h2>
+        <div id="listaSolicitacoes">
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

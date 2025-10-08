@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos de Solicitação</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Grupos de Solicitação de Materiais</h1>
+            <img src="IMG/ABA.png" alt="Logo da Empresa" class="logo">
+            
+        </div>
+        <p class="sub">Computer Center</p>
+
+        <div class="card form-card">
+            <h2>Criar Novo Grupo</h2>
+            <form id="novoGrupoForm">
+                <input type="text" id="nomeGrupoInput" placeholder="Ex: Solicitações de Outubro" required>
+                <button type="submit">Criar Grupo</button>
+            </form>
+        </div>
+
+        <div class="card list-card">
+            <h2>Grupos Existentes</h2>
+            <div id="listaDeGrupos">
+                </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
