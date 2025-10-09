@@ -110,3 +110,5 @@ app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
     console.log(`Acesse seu site em http://localhost:${PORT}`);
 });
+
+module.exports = app;
