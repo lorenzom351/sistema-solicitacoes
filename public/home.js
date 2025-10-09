@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (confirmado) {
                 try {
-                    const response = await fetch(`/api/grupos/${encodeURIComponent(nomeDoGrupo)}`, {
+                    const response = await fetch(`/api/grupos?nome=${encodeURIComponent(nomeDoGrupo)}`, {
                         method: 'DELETE'
                     });
 

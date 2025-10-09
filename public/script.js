@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Função para buscar as solicitações da API
     async function fetchSolicitacoes() {
         try {
-            const response = await fetch(`/api/solicitacoes/${encodeURIComponent(nomeDoGrupo)}`);
+            const response = await fetch(`/api/solicitacoes?grupo=${encodeURIComponent(nomeDoGrupo)}`);
             if (!response.ok) throw new Error('Erro ao buscar solicitações.');
             solicitacoes = await response.json();
             renderSolicitacoes();
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Função para atualizar o status de uma solicitação na API
     async function atualizarStatusAPI(id, novoStatus) {
         try {
-            await fetch(`/api/solicitacoes/${encodeURIComponent(nomeDoGrupo)}/${id}`, {
+            await fetch(`/api/solicitacoes?id=${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ status: novoStatus })
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       };
 
       try {
-        const response = await fetch(`/api/solicitacoes/${encodeURIComponent(nomeDoGrupo)}`, {
+        const response = await fetch(`/api/solicitacoes?grupo=${encodeURIComponent(nomeDoGrupo)}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(novaSolicitacao)
